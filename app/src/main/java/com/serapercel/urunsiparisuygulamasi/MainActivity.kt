@@ -1,5 +1,6 @@
 package com.serapercel.urunsiparisuygulamasi
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -31,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         dummyService.products().enqueue(object : Callback<DummyProducts> {
             override fun onResponse(call: Call<DummyProducts>, response: Response<DummyProducts>) {
-                val datas = response.body();
+                val datas = response.body()
                 list = datas!!.products
                 val customAdapter = CustomAdapter(this@MainActivity, list)
                 listView.adapter = customAdapter
@@ -42,5 +43,17 @@ class MainActivity : AppCompatActivity() {
                 Log.e("dummyService", t.toString())
             }
         })
+
+
+        btnCart.setOnClickListener {
+            val intent = Intent(this, CartActivity::class.java)
+            startActivity(intent)
+        }
+
+        listView.setOnItemClickListener { adapterView, view, i, l ->
+            val intent = Intent(this, DetailActivity::class.java)
+            intent.putExtra("id", i)
+            startActivity(intent)
+        }
     }
 }
