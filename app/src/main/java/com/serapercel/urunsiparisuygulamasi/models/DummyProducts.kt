@@ -1,6 +1,6 @@
-package com.serapercel.uruntanitimuygulamasi.models
+package com.serapercel.urunsiparisuygulamasi.models
 
-data class DummyProducts (
+data class DummyProducts(
     val products: List<Product>,
     val total: Long,
     val skip: Long,

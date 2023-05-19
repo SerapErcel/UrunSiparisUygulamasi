@@ -16,14 +16,21 @@ class CartCustomAdapter(private val context: Activity, private val list: List<Ca
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val rootView = context.layoutInflater.inflate(R.layout.cart_list_item, null, true)
 
-        val tv1 = rootView.findViewById<TextView>(R.id.textView)
-        val tv2 = rootView.findViewById<TextView>(R.id.textView2)
-        val tv3 = rootView.findViewById<TextView>(R.id.textView3)
+        val title = rootView.findViewById<TextView>(R.id.title)
+        val price = rootView.findViewById<TextView>(R.id.price)
+        val quantity = rootView.findViewById<TextView>(R.id.quantity)
+        val total = rootView.findViewById<TextView>(R.id.total)
+        val discountPercentage = rootView.findViewById<TextView>(R.id.discountPercentage)
+        val discountedPrice = rootView.findViewById<TextView>(R.id.discountedPrice)
 
-        val product = list.get(position)
-        tv1.text = product.title
-        tv2.text = product.price.toString()
-        tv3.text = product.total.toString()
+
+        val product = list[position]
+        title.text = product.title
+        price.text = product.price.toString()
+        quantity.text = product.total.toString()
+        total.text = product.total.toString()
+        discountPercentage.text = product.discountPercentage.toString()
+        discountedPrice.text = product.discountedPrice.toString()
 
         return rootView
     }

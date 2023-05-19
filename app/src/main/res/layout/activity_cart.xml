@@ -10,6 +10,8 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/sepetim"
         android:textSize="32sp"
         android:textStyle="bold"

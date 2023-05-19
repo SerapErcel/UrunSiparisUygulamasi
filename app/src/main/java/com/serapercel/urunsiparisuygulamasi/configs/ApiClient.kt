@@ -10,7 +10,7 @@ object ApiClient {
     private const val Base_URL = "https://dummyjson.com/"
     private var retrofit: Retrofit? = null
 
-    val client = OkHttpClient.Builder()
+    private val client = OkHttpClient.Builder()
         .readTimeout(60, TimeUnit.SECONDS)
         .build()
 

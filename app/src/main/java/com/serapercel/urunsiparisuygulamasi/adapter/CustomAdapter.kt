@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.serapercel.urunsiparisuygulamasi.R
-import com.serapercel.uruntanitimuygulamasi.models.Product
+import com.serapercel.urunsiparisuygulamasi.models.Product
 
 class CustomAdapter(private val context: Activity, private val list: List<Product>) :
     ArrayAdapter<Product>(

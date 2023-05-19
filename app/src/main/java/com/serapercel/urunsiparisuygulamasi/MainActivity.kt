@@ -3,14 +3,14 @@ package com.serapercel.urunsiparisuygulamasi
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.ListView
+import android.widget.Toast
 import com.serapercel.urunsiparisuygulamasi.adapter.CustomAdapter
 import com.serapercel.urunsiparisuygulamasi.configs.ApiClient
 import com.serapercel.urunsiparisuygulamasi.services.DummyService
-import com.serapercel.uruntanitimuygulamasi.models.DummyProducts
-import com.serapercel.uruntanitimuygulamasi.models.Product
+import com.serapercel.urunsiparisuygulamasi.models.DummyProducts
+import com.serapercel.urunsiparisuygulamasi.models.Product
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -36,11 +36,10 @@ class MainActivity : AppCompatActivity() {
                 list = datas!!.products
                 val customAdapter = CustomAdapter(this@MainActivity, list)
                 listView.adapter = customAdapter
-
             }
 
             override fun onFailure(call: Call<DummyProducts>, t: Throwable) {
-                Log.e("dummyService", t.toString())
+                Toast.makeText(this@MainActivity, "Hata Oluştu!", Toast.LENGTH_SHORT).show()
             }
         })
 

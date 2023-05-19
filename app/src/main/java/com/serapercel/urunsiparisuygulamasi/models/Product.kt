@@ -1,4 +1,4 @@
-package com.serapercel.uruntanitimuygulamasi.models
+package com.serapercel.urunsiparisuygulamasi.models
 
 data class Product (
     val id: Long,

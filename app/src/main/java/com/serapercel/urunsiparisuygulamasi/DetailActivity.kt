@@ -1,8 +1,8 @@
 package com.serapercel.urunsiparisuygulamasi
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -12,8 +12,7 @@ import com.serapercel.urunsiparisuygulamasi.configs.ApiClient
 import com.serapercel.urunsiparisuygulamasi.models.RequestCart
 import com.serapercel.urunsiparisuygulamasi.models.RequestProduct
 import com.serapercel.urunsiparisuygulamasi.services.DummyService
-import com.serapercel.uruntanitimuygulamasi.models.DummyProducts
-import com.serapercel.uruntanitimuygulamasi.models.Product
+import com.serapercel.urunsiparisuygulamasi.models.Product
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -58,28 +57,28 @@ class DetailActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<Product>, t: Throwable) {
-                Toast.makeText(this@DetailActivity, "Hata", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@DetailActivity, "Hata Oluştu!", Toast.LENGTH_SHORT).show()
             }
-
         })
 
         btnAddCart.setOnClickListener {
 
-            var cartProducts = RequestCart(userId = 1, listOf(RequestProduct(id, 1)))
-
+            val cartProducts = RequestCart(userId = 1, listOf(RequestProduct(id, 1)))
 
             dummyService.addCart(cartProducts).enqueue(object : Callback<RequestCart> {
                 override fun onResponse(
                     call: Call<RequestCart>,
                     response: Response<RequestCart>
                 ) {
-                    Log.d("test", response.toString())
+                    Toast.makeText(this@DetailActivity, "Başarıyla Eklendi!", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@DetailActivity, CartActivity::class.java)
+                    startActivity(intent)
+                    finish()
                 }
 
                 override fun onFailure(call: Call<RequestCart>, t: Throwable) {
-
+                    Toast.makeText(this@DetailActivity, "Hata Oluştu!", Toast.LENGTH_SHORT).show()
                 }
-
             })
         }
     }

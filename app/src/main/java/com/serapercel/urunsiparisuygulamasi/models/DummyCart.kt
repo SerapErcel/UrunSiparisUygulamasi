@@ -1,6 +1,6 @@
 package com.serapercel.urunsiparisuygulamasi.models
 
-data class DummyCart (
+data class DummyCart(
     val id: Long? = null,
     val products: List<CartProduct>? = null,
     val total: Long? = null,
@@ -10,7 +10,7 @@ data class DummyCart (
     val totalQuantity: Long? = null
 )
 
-data class CartProduct (
+data class CartProduct(
     val id: Long? = null,
     val title: String? = null,
     val price: Long? = null,
