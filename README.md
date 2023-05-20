@@ -16,6 +16,6 @@ Uygulama içeriğinde kullanılan datalar
 - Retrofit
 
 ## Uygulama Görselleri
-<img src= "https://github.com/sercel23/UrunSiparisUygulamasi/assets/57289819/420ef826-5d4a-487a-8453-8dbcb21a9505" height="450px"/>
-<img src= "https://github.com/sercel23/UrunSiparisUygulamasi/assets/57289819/1208439f-1225-4f50-8a1e-449564bad7f9" height="450px"/>
-<img src= "https://github.com/sercel23/UrunSiparisUygulamasi/assets/57289819/6d106be1-3372-418d-a9f7-4c1e4da21475" height="450px"/>
+![urunSiparisUygulamasi1](https://github.com/sercel23/UrunSiparisUygulamasi/assets/57289819/b8431a60-446f-4995-9cb4-e98707a3fef8)
+![urunSiparisUygulamasi2](https://github.com/sercel23/UrunSiparisUygulamasi/assets/57289819/72afee5c-ad7d-471a-b00e-b9bb6b89021c)
+![urunSiparisUygulamasi3](https://github.com/sercel23/UrunSiparisUygulamasi/assets/57289819/9ff0ad21-cc46-4344-a1cd-098b23a744dd)
